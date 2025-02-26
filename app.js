@@ -6,8 +6,8 @@ const port = 3000
 const postsRouter = require("./routers/posts")
 
 // IMPORTO GESTIONE ERRORI
-const validatorFound = require("./middleware/validatorFound")
-const validatorError = require("./middleware/validatorError")
+// const validatorFound = require("./middleware/validatorFound")
+// const validatorError = require("./middleware/validatorError")
 
 // MIDDLEWARE
 app.use(express.static('public'))
@@ -21,8 +21,8 @@ app.get('/bacheca', (req, res) => {
     res.json()
   })
 app.get('/favicon.ico', (req, res) => res.status(204).end());
-app.use(validatorFound)
-app.use(validatorError)
+// app.use(validatorFound)
+// app.use(validatorError)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
